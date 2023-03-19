@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/fragmentHome">
+    <fragment
+        android:id="@+id/fragmentAbout"
+        android:name="com.denniz.labb_2_dy.FragmentAbout"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.denniz.labb_2_dy.FragmentLogin"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentNewsletter"
+            app:destination="@id/fragmentNewsletter" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.denniz.labb_2_dy.FragmentHome"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentAbout"
+            app:destination="@id/fragmentAbout"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentSignin"
+            app:destination="@id/fragmentSignin5" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentSignin"
+            app:destination="@id/fragmentSignin5"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSignin5"
+        android:name="com.denniz.labb_2_dy.FragmentSignin"
+        android:label="fragment_signin"
+        tools:layout="@layout/fragment_signin" >
+        <action
+            android:id="@+id/action_fragmentSignin5_to_fragmentLogin"
+            app:destination="@id/fragmentLogin"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNewsletter"
+        android:name="com.denniz.labb_2_dy.FragmentNewsletter"
+        android:label="fragment_newsletter"
+        tools:layout="@layout/fragment_newsletter" />
+</navigation>
